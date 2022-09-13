@@ -1,7 +1,7 @@
 export type Category = {
-   [tag: string] : {
-        title: string;
-        color: string;
-        expense: boolean;
-    }
+    id?: string,
+    title: string;
+    idUser?: string;
+    expense: boolean;
+
 }

@@ -1,12 +1,12 @@
-import { Iten } from "../types/itens";
+import { Item } from "../types/item";
 
 export const getCurrentMonth = () => {
     let now = new Date();
     return `${now.getFullYear()}-${now.getMonth() + 1}`;
 };
 
-export const FilterListByMonth = (list: Iten[], date: string): Iten[] => {
-    let newList: Iten[] = [];
+export const FilterListByMonth = (list: Item[], date: string): Item[] => {
+    let newList: Item[] = [];
     let [year, month] = date.split("-");
 
     newList = list.filter(iten => {
@@ -26,6 +26,13 @@ export const FormatDate = (date: Date) : string => {
        day = (date.getDate()).toString().padStart(2, '0');
 
     return`${year}-${month}-${day}`;
+};
+export const FormatDateInput = (date: Date) : string => {
+   let year = date.getFullYear(),
+       month = (date.getMonth() + 1).toString().padStart(2, '0'),
+       day = (date.getDate()).toString().padStart(2, '0');
+
+    return`${day}-${month}-${year}`;
 };
 
 export const formatCurrentMonth = (currentMonth: string): string => {

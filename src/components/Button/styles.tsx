@@ -43,7 +43,7 @@ export const varianToColor = {
 export const variantToSize = {
     small: {
         fontSize: "12px",
-        padding: "10px 16px",
+        padding: "8px 14px",
     },
     medium: {
         fontSize: "14px",

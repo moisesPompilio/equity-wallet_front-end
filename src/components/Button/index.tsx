@@ -4,9 +4,10 @@ export type ButtonProps = {
     label: string;
     variant?: "primary" | "secondary" | "outline";
     size?: "small" | "medium" | "large";
+    onClick?: () => void;
 }
 
-function Button({ variant = "primary", label, size = "medium" }: ButtonProps) {
+function Button({ variant = "primary", label, size = "medium", ...props}: ButtonProps) {
     const { bgColor, borderColor, color, hover } = varianToColor[variant];
     const { fontSize, padding } = variantToSize[size];
     return (
@@ -18,6 +19,7 @@ function Button({ variant = "primary", label, size = "medium" }: ButtonProps) {
             hoverColor={hover.color}
             fontSize={fontSize}
             padding={padding}
+            {...props}
         >
             {label}
         </Container>
