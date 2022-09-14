@@ -2,26 +2,24 @@ import { Category } from "../../types/category";
 import { useState } from 'react';
 import * as C from "./styles";
 import Button from "../Button";
-import { Title } from '../InputArea/styles';
+import { UpdateItem } from '../UpdateItem/index';
+import { InputCategoryInline } from '../InputCategoryInline/index';
+import { CategoryApi } from "../../hooks/CategoryApi";
 
 type Props = {
     listCategory: Category[],
     getItens: () => void,
+    getCategory: () => void,
 }
-export const InputCategory = ({ listCategory, getItens }: Props) => {
+export const InputCategory = ({ listCategory, getItens, getCategory }: Props) => {
     const [title, setTitle] = useState<string>("");
-    const [value, setValue] = useState<number>(0);
     const [type, setType] = useState<string>("false");
-    const [inputItems, setInputItems] = useState<boolean>(false);
-    const invertInputItems = () => {
-        setInputItems(!inputItems);
-    }
-    const SaveItem = async () => {
-
+    const SaveCategory = async () => {
         try {
-            const save = 201
+            const save = await CategoryApi().post({title, expense: (type == "true")})
             if (save == 201) {
                 getItens();
+                await getCategory();
                 CleanFields();
             } else {
                 alert("Error saving item! Complete all the fields correctly");
@@ -54,20 +52,12 @@ export const InputCategory = ({ listCategory, getItens }: Props) => {
                         </C.Select>
                     </C.TableColumn>
                     <C.TableColumn >
-                        <Button label="Save" onClick={SaveItem} />--
+                        <Button label="Save" onClick={SaveCategory} />--
                         <Button variant="secondary" label="Clean" onClick={CleanFields} /></C.TableColumn>
                 </C.TableLine>
                 {listCategory.map((object, index) => {
                     return (
-                        <C.TableLine key={index}>
-                            <C.TableColumn >{object.title}</C.TableColumn>
-                            <C.TableColumn >
-                                {object.expense? "Expenses": "Earnings"}
-                            </C.TableColumn>
-                            <C.TableColumn >
-                                <Button label="Update" onClick={SaveItem} />--
-                                <Button variant="secondary" label="Delete" onClick={CleanFields} /></C.TableColumn>
-                        </C.TableLine>
+                        <InputCategoryInline key={index} getItens={getItens} getCategory={getCategory} category={object} />
                     )
                 })}
             </tbody>

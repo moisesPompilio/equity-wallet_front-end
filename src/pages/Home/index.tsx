@@ -49,7 +49,7 @@ function Home() {
   const handleMonthChange = (newMonth: string) => {
     setCurrentMounth(newMonth);
   };
-  const getCategory = async () =>{
+  const getCategory = async () => {
     setListCategory((await categoryApi.get()));
   }
   const getItens = async () => {
@@ -65,8 +65,8 @@ function Home() {
           currentMonth={currentMonth}
           onMonthChange={handleMonthChange}
         />
-        <InputArea getItens={getItens} listCategory={listCategory}/>
-        <TableArea list={filteredLister} getItens={getItens} listCategory={listCategory}/>
+        <InputArea getItens={getItens} listCategory={listCategory} getCategory={getCategory} />
+        <TableArea list={filteredLister} getItens={getItens} listCategory={listCategory} />
       </C.Body>
     </C.Container>
   )

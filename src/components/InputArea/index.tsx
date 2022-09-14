@@ -7,8 +7,9 @@ import { InputCategory } from '../InputCategory/index';
 type Props = {
     listCategory: Category[],
     getItens: () => void,
+    getCategory: () => void,
 }
-export const InputArea = ({ listCategory, getItens }: Props) => {
+export const InputArea = ({ listCategory, getItens, getCategory }: Props) => {
     const [inputItems, setInputItems] = useState<boolean>(false);
     const invertInputItems = () =>{
         setInputItems(!inputItems);
@@ -21,7 +22,7 @@ export const InputArea = ({ listCategory, getItens }: Props) => {
         <C.Container>
             <C.IputSpace>
                 <C.Title onClick={invertInputCategory}> Category Info ☰</C.Title>
-                {inputCategory && <InputCategory getItens={getItens} listCategory={listCategory} />}
+                {inputCategory && <InputCategory getItens={getItens} listCategory={listCategory} getCategory={getCategory} />}
             </C.IputSpace>
             <C.IputSpace>
                 <C.Title onClick={invertInputItems}> Add Item +</C.Title>
