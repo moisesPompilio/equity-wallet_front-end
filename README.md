@@ -62,10 +62,10 @@ The system works in a simple way, first you must register a user, after that reg
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
 
 ## :white_check_mark: Requirements ##
 
