@@ -52,12 +52,10 @@ The system works in a simple way, first you must register a user, after that reg
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Clone the project;\
-:heavy_check_mark: Access the project folder;\
-:heavy_check_mark: Install dependencies an run the project;\
-:heavy_check_mark: Create a user;\
-:heavy_check_mark: Create your categories;\
-:heavy_check_mark: Register your income or expense item;
+:heavy_check_mark: Build the user registration page\
+:heavy_check_mark: Build the user login page;\
+:heavy_check_mark: Integrate the application with the API;\
+:heavy_check_mark: Contruir info area, input area e table area;
 
 ## :rocket: Technologies ##
 
