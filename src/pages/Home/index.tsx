@@ -11,6 +11,7 @@ import { TableArea } from '../../components/TableArea';
 import { InfoArea } from '../../components/InfoArea';
 import { CategoryApi } from '../../hooks/CategoryApi';
 import { ItemApi } from '../../hooks/ItemApi';
+import { InputArea } from '../../components/InputArea';
 
 function Home() {
   const categoryApi = CategoryApi();
@@ -64,6 +65,7 @@ function Home() {
           currentMonth={currentMonth}
           onMonthChange={handleMonthChange}
         />
+        <InputArea getItens={getItens} listCategory={listCategory}/>
         <TableArea list={filteredLister} getItens={getItens} listCategory={listCategory}/>
       </C.Body>
     </C.Container>

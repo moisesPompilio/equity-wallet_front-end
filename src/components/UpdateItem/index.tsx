@@ -29,7 +29,7 @@ export const UpdateItem = ({ invertUpdate, listCategory, item, getItens }: Props
         }
         const update = await ItemApi().put(itemInsert);
         await getItens();
-        invertUpdate()
+        invertUpdate();
     }
 
     return (

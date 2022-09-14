@@ -29,8 +29,14 @@ export const ItemApi = () => ({
     delete: async (Item: Item): Promise<void> => {
         const response = await api.delete("item/" + Item.id)
     },
-    post: async (iten: ItemInsert) => {
-
+    post: async (iten: ItemInsert): Promise<number> => {
+        const response = await api.post("item", iten).then(res => {
+            return res.status;
+        }).catch(error => {
+            console.log(error.response.data.message)
+            throw new Error(error.response.data.message);
+        })
+        return response;
     },
     put: async (iten: ItemInsert) => {
         const response = await api.put("item/" + iten.id, iten).then(res => {
