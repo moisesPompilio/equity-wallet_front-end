@@ -7,6 +7,7 @@ background-color: ${AppColors.darkGray};
 padding:10px;
 border-radius: 5px;
 margin-top: 10px;
+color: ${AppColors.lightGray};
 `;
 
 export const TableHeadColum = styled.th`

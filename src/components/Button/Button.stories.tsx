@@ -1,7 +1,7 @@
 import Button, { ButtonProps } from ".";
 import { Story, ComponentMeta } from "@storybook/react";
 export default {
-    title: "Buttons/Button",
+    title: "Components/Button",
     component: Button,
     argTypes: {
         label: {

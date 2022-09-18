@@ -7,6 +7,7 @@ background-color: ${AppColors.darkGray};
 padding:10px;
 border-radius: 5px;
 margin-top: 10px;
+color: ${AppColors.lightGray}
 `;
 
 export const TableHeadColum = styled.th`
@@ -24,6 +25,7 @@ export const TableColumn = styled.td`
     @media screen and (max-width: 500px) {
         font-size: 14px;
     }
+    color: ${AppColors.lightGray}
 `;
 export const Input = styled.input`
     margin-left: 10%;

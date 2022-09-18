@@ -6,12 +6,12 @@ import { UpdateItem } from '../UpdateItem/index';
 import { InputCategoryInline } from '../InputCategoryInline/index';
 import { CategoryApi } from "../../hooks/CategoryApi";
 
-type Props = {
+export type InputCategoryProps = {
     listCategory: Category[],
     getItens: () => void,
     getCategory: () => void,
 }
-export const InputCategory = ({ listCategory, getItens, getCategory }: Props) => {
+export const InputCategory = ({ listCategory, getItens, getCategory }: InputCategoryProps) => {
     const [title, setTitle] = useState<string>("");
     const [type, setType] = useState<string>("false");
     const SaveCategory = async () => {

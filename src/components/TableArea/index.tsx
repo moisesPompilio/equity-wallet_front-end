@@ -3,13 +3,13 @@ import { Item } from "../../types/item";
 import { TableIten } from "../TableIten";
 import * as C from "./styles";
 
-type Props = {
+export type TableAreaProps = {
     list: Item[];
     getItens: () => void;
     listCategory: Category[];
 }
 
-export const TableArea = ({ list, getItens, listCategory }: Props) => {
+export const TableArea = ({ list, getItens, listCategory }: TableAreaProps) => {
     return (
         <C.Table>
             <thead>

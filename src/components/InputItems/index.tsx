@@ -4,11 +4,11 @@ import { Category } from '../../types/category';
 import { FormatDate } from "../../helpers/dateFilter";
 import Button from "../Button";
 import { ItemApi } from "../../hooks/ItemApi";
-type Props = {
+export type InputItemsProps = {
     listCategory: Category[],
     getItens: () => void,
 }
-export const InputItems = ({ listCategory, getItens }: Props) => {
+export const InputItems = ({ listCategory, getItens }: InputItemsProps) => {
     let dateItem = new Date();
     const [date, setDate] = useState<string>(FormatDate(dateItem));
     const [title, setTitle] = useState<string>("");

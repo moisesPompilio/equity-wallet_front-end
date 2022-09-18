@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react';
 import { InputItems } from "../InputItems";
 import { InputCategory } from '../InputCategory/index';
 
-type Props = {
+export type InputAreaProps = {
     listCategory: Category[],
     getItens: () => void,
     getCategory: () => void,
 }
-export const InputArea = ({ listCategory, getItens, getCategory }: Props) => {
+export const InputArea = ({ listCategory, getItens, getCategory }: InputAreaProps) => {
     const [inputItems, setInputItems] = useState<boolean>(false);
     const invertInputItems = () =>{
         setInputItems(!inputItems);

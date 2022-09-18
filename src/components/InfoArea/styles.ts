@@ -38,6 +38,7 @@ export const MonthArrow = styled.div`
 export const MonthTitle = styled.h2`
     flex: 1;
     text-align: center;
+    color: ${AppColors.lightGray}
 `;
 
 export const ResumeArea = styled.div`

@@ -5,6 +5,7 @@ import { AppColors } from "../../styles/global";
 
 export const Container = styled.div`
   flex: 1;
+  color: ${AppColors.lightGray}
 `;
 
 export const Title = styled.div`

@@ -8,13 +8,13 @@ import Button from "../Button"
 import { UpdateItem } from "../UpdateItem"
 import * as C from "./styles"
 
-type Props = {
+export type TableItenProps = {
     iten: Item,
     getItens: () => void,
     listCategory: Category[],
 }
 
-export const TableIten = ({ iten, getItens, listCategory }: Props) => {
+export const TableIten = ({ iten, getItens, listCategory }: TableItenProps) => {
     let dateItem = new Date(iten.date);
     let deleteItem = async () => {
         await ItemApi().delete(iten);

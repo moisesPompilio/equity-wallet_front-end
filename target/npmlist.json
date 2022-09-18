@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"equity-wallet","dependencies":{"@babel/plugin-syntax-jsx":{"version":"7.12.1"},"axios":{"version":"0.27.2"},"dotenv":{"version":"16.0.2"},"react-dom":{"version":"18.2.0"},"react-icons":{"version":"4.4.0"},"react-router-dom":{"version":"6.3.0"},"react":{"version":"18.2.0"},"styled-components":{"version":"5.3.5"},"web-vitals":{"version":"3.0.1"}}}

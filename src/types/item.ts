@@ -1,7 +1,7 @@
 import { category } from '../data/category';
 export type Item = {
     id?: string;
-    date: Date;
+    date: string;
     idCategory: category;
     title: string;
     value: number;

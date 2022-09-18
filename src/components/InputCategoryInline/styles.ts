@@ -7,6 +7,7 @@ export const TableColumn = styled.td`
     padding: 10px 0;
     width: auto;
     text-align: center;
+    color: ${AppColors.lightGray}
     font-weight: semi-bold;
     @media screen and (max-width: 500px) {
         font-size: 14px;

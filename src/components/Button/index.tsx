@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, varianToColor, variantToSize } from "./styles";
 export type ButtonProps = {
     label: string;

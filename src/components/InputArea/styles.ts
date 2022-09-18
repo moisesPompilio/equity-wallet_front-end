@@ -10,6 +10,7 @@ border-radius: 10px;
 margin-top: 20px;
 display: flex;
 flex-direction: column;
+color: ${AppColors.lightGray};
 `;
 
 export const IputSpace = styled.div`
@@ -28,4 +29,5 @@ font-size: 15px;
 margin: 7px;
 cursor: pointer;
 width: auto;
+color: ${AppColors.lightGray}
 `;

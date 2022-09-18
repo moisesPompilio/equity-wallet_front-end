@@ -4,14 +4,14 @@ import { Category } from "../../types/category";
 import Button from "../Button";
 import * as C from "./styles";
 
-type Props = {
+export type UpdateCategoryProps = {
     invertUpdate: () => void,
     category: Category,
     getItens: () => void,
     getCategory: () => void,
 }
 
-export const UpdateCategory = ({ invertUpdate, category, getItens, getCategory }: Props) => {
+export const UpdateCategory = ({ invertUpdate, category, getItens, getCategory }: UpdateCategoryProps) => {
     const [type, setType] = useState<string>(category.expense.toString());
     const [title, setTitle] = useState<string>(category.title);
     const updateCategory = async () => {

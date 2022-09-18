@@ -5,13 +5,13 @@ import { Category } from "../../types/category";
 import Button from "../Button";
 import { UpdateCategory } from '../UpdateCategory/index';
 
-type Props = {
+export type InputCategoryInlineProps = {
     category: Category,
     getItens: () => void,
     getCategory: () => void,
 }
 
-export const InputCategoryInline = ({ category, getItens, getCategory }: Props) => {
+export const InputCategoryInline = ({ category, getItens, getCategory }: InputCategoryInlineProps) => {
     let deleteCategory = async () => {
         await CategoryApi().delete(category);
         getCategory();

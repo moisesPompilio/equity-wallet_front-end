@@ -8,6 +8,7 @@ padding:20px;
 box-shadow: 0px 0px 1px #CCC;
 border-radius: 10px;
 margin-top: 20px;
+color: ${AppColors.lightGray}
 `;
 
 export const TableHeadColum = styled.th<{width?: number}>`
