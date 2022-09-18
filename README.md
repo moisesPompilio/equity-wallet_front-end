@@ -46,8 +46,9 @@
 
 ## :dart: About ##
 
-This is Equity-Wallet front-end it was developed with React, TypeScript and StoryBook, it has the reuse of components and Context on login. The Software communicates with Api in node.js.
 
+System developed to help people control their expenses, in an easy and practical way, thus saving time and encouraging people to have a conscious financial life.\
+This is Equity-Wallet front-end it was developed with React, TypeScript and StoryBook, it has the reuse of components and Context on login. The Software communicates with Api in node.js.\
 The system works in a simple way, first you must register a user, after that register all the categories you want, be it expenses (example: food and rent) or earnings (example: salary), after that register your expense items (Example: hamburger and grocery shopping) and earnings (Example: Salary of the month)
 
 ## :sparkles: Features ##
@@ -61,10 +62,10 @@ The system works in a simple way, first you must register a user, after that reg
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
 
 ## :white_check_mark: Requirements ##
 
